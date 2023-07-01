@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Churn Class Prediction</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="container contact-form">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h3>Costumer Churn Prediction</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="CustomerId" class="form-control" placeholder="CustomerId"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Surname" class="form-control" placeholder="Surname"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="CreditScore" class="form-control" placeholder="CreditScore"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Geography" class="form-control" placeholder="Geography"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Gender">Choose Gender</label>
+                        <select name="Gender" id="Gender" class="form-control" required="required">
+                            <option selected>Select Gender</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Age" class="form-control" placeholder="Age" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Tenure" class="form-control" placeholder="Tenure"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Balance" class="form-control" placeholder="Balance"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="NumOfProducts" class="form-control" placeholder="NumOfProducts"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="HasCrCard">Has Credit Card</label>
+                        <select name="HasCrCard" id="HasCrCard" class="form-control" required="required">
+                            <option selected>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="HasCrCard">Active Member or Not</label>
+                        <select name="IsActiveMember" id="IsActiveMember" class="form-control" required="required">
+                            <option selected>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="EstimatedSalary" class="form-control" placeholder="Estimated Salary in ($)"
+                            required="required" />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-large">
+                        Predict
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <h3>
+                        Hasil Prediksi : <br />
+                        {{ prediction_text }}
+                        <br />
+                    </h3>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
