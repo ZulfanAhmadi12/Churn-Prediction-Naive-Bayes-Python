@@ -22,12 +22,10 @@ By combining the power of the Naive Bayes algorithm, class imbalance handling te
 
 Note: It is important to preprocess and analyze the dataset, split it into training and testing sets, and perform feature engineering before handling class imbalance and training the Naive Bayes model. Additionally, model evaluation and performance metrics should be considered to assess the accuracy and reliability of the predictions.
 
-<img src="https://github.com/ZulfanAhmadi12/MyPortfolio/blob/main/public/backend/assets/images/logoportofolio.png" width="200" height="100">
-
 ## Churn Prediction User Interfaces
 
 <figure>
-    <img src="https://github.com/ZulfanAhmadi12/MyPortfolio/blob/main/homefirst.png"
+    <img src="https://github.com/ZulfanAhmadi12/Churn-Prediction-Naive-Bayes-Python/blob/master/userinterfaceChurn.png"
          alt="Home Top Page" width="600" height="300">
     <figcaption>Screenshot Home Page, at the top of the page.</figcaption>
 </figure>
